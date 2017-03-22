@@ -1,0 +1,14 @@
+{
+  "name": "printreport",
+  "version": "0.0.1",
+  "description": "Uses phantomjs to take html string and generate a pdf that is saved to the filesystem.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Starosciak",
+  "license": "MIT",
+  "dependencies": {
+    "html-pdf": "^2.1.0"
+  }
+}
