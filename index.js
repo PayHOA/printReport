@@ -24,16 +24,13 @@ const options = {
 
 
 const htmlString = process.argv[2];
-const ein = process.argv[3];
 
-if ( htmlString && ein) {
-
-  pdf.create(htmlString, options).toFile(`pdf/report-${ein}.pdf`, function(err, res) {
+if (htmlString) {
+  pdf.create(htmlString, options).toBuffer(function(err, buffer) {
     if (err) return console.log(err);
-    console.log(res);
+    process.stdout.write(buffer);
   });
 
 } else {
   !htmlString ? console.log('Provide <html> as first parameter') : false;
-  !ein ? console.log('Provide <ein> as second parameter') : false;
 }
